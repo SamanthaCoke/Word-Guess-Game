@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Varela+Round&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" type="text/css" href="assets/css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+  </head>
+  <body>
+    <header class="main-header">
+      <h1>Guess that Fruit Word Game!</h1>
+    </header>
+
+    <main>
+      <div class="container">
+        <div class="middle">
+         <br />
+          <h2 id="pressPlay">Press any key to start!</h2>
+          <br />
+          <h2 id="answerWord"></h2>
+        </div>
+      </div>
+      <div class="left side">
+        <div class="wins">
+          <h3>Wins</h3>
+          <p id="numWins"></p>
+        </div>
+      </div>
+      <div class="left side">
+        <div class="losses">
+          <h3>Losses</h3>
+          <p id="numLosses"></p>
+        </div>
+      </div>
+      <div class="right side">
+        <h3><span id="numGuesses"></span> remaining guesses</h3>
+        <h3>Letters Guessed</h3>
+        <p id="guessedLetters"></p>
+      </div>
+    </main>
+    <!-- </main> -->
+    <!-- <div id="word"> -->
+    <!-- <div id="letter1" class="letters" >
+        </div> -->
+    <!-- </div> -->
+    <!-- <div><button>onClick= "myFunction"() => {}</button>>Click me!</div> -->
+
+    <script src="assets/javascript/game.js"></script>
+  </body>
+</html>

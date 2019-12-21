@@ -1,0 +1,45 @@
+
+ .letters {
+    border-bottom: 1px solid black;
+    display: inline-block;
+    width: 22px;
+    text-align: center; 
+}
+body {
+    /* background-image:url("../img/map.jpg"); */
+    background-color: lightcoral;
+}
+h1 {
+    font-family: 'Varela Round', sans-serif;
+    color: white;
+    text-align: center;
+    font-size: 3.5em
+}
+
+h2 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    font-size: 1.5em
+}
+
+h3 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+    font-size: 1em;
+}
+
+#guessedLetters {
+    color: red;
+}
+
+#pressPlay {
+    color: teal;
+}
+
+#answeredword {
+    color: gold;
+}
+
+.container {
+    display: block;
+}
