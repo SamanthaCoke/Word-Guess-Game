@@ -22,8 +22,10 @@ var ansWord;
 var isFinished = true
 
 function setup() {
+  // choose a word randomly
   ansWord = hiddenWords[Math.floor(Math.random() * hiddenWords.length)];
   console.log("aw",ansWord)
+  // create the dashes. # of dashes is the length of the word
   dash = [];
   for (var i = 0; i < ansWord.length; i++) {
     dash[i] = "_";
@@ -45,20 +47,22 @@ function updateScreen() {
 }
 
 function checkGuess(letter) {
+  letter = letter.toUpperCase();
   if (guessedLetters.indexOf(letter) === -1) {
-    guessedLetters.push(letter);
-    console.log(guessedLetters)
     if (ansWord.indexOf(letter) === -1) {
+      guessedLetters.push(letter);
       remainingGuesses--;
       if (remainingGuesses<= 0) {
         console.log("you lost")
+        isLoser();
       }
     } else {
-      for (var i = 0; i < ansWord.length; i++) {
+      for (var i = 0; i < ansWord.length; i++) { 
         if (letter === ansWord[i]) {
           dash[i] = letter;
         }
       }
+      isWinner();
     }
   }
 }
@@ -66,18 +70,18 @@ function checkGuess(letter) {
 function isWinner() {
   if (dash.indexOf("_") === -1) {
     numWins++;
-    isComplete = true;
-    if (ansWord === "APPLE") {
-    } else if (ansWord === "AVOCADO") {
-    } else if (ansWord === "BANANA") {
-    } else if (ansWord === "BLUEBERRY") {
-    } else if (ansWord === "COCONUT") {
-    } else if (ansWord === "GRAPES") {
-    } else if (ansWord === "PEAR") {
-    } else if (ansWord === "PEACH") {
-    } else if (ansWord === "PLUM") {
-    } else if (ansWord === "ORANGE") {
-    }
+    isFinished = true;
+    // if (ansWord === "APPLE") {
+    // } else if (ansWord === "AVOCADO") {
+    // } else if (ansWord === "BANANA") {
+    // } else if (ansWord === "BLUEBERRY") {
+    // } else if (ansWord === "COCONUT") {
+    // } else if (ansWord === "GRAPES") {
+    // } else if (ansWord === "PEAR") {
+    // } else if (ansWord === "PEACH") {
+    // } else if (ansWord === "PLUM") {
+    // } else if (ansWord === "ORANGE") {
+    // }
   }
 }
 
@@ -100,5 +104,4 @@ document.onkeyup = function(event) {
     updateScreen();
   }
 };
-setup();
-updateScreen();
+
